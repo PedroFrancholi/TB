@@ -24,7 +24,7 @@ router.post("/recipe", auth, async(req,res)=>{
         const userId = req.userId;
         const savedRecipe = await saveRecipe(recipe, userId);
         res.status(201).json({
-            task: savedRecipe,
+            recipe: savedRecipe,
         });
     }catch(error){
         if(error instanceof z.ZodError) {
