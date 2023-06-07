@@ -9,7 +9,7 @@ const auth = (req,res,next) =>{
         req.userId = payload.userId
         next();
     }catch(error){
-        res.staus(401).send();
+        res.status(401).send();
     }
 }
 
